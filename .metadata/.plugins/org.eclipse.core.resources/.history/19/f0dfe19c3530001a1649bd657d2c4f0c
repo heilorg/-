@@ -12,7 +12,7 @@ public class Car {
 
 	public Car(){}//»ý¼ºÀÚ
 	public Car(String n, String o, float mo, float ol, float f, float ms) {
-		this.name = n;
+		name = n;
 		this.owner = o;
 		this.max_oil_level = mo;
 		this.oil_level_gauge = ol;

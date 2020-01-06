@@ -9,8 +9,9 @@ public class Car {
 	float oil_level_gauge;
 	float fuel_efficiency;
 	float maxSpeed;
+	
+	float maxDistance;
 
-	public Car(){}//»ý¼ºÀÚ
 	public Car(String n, String o, float mo, float ol, float f, float ms) {
 		this.name = n;
 		this.owner = o;

@@ -10,7 +10,7 @@ public class Car {
 	float fuel_efficiency;
 	float maxSpeed;
 
-	public Car(){}//»ý¼ºÀÚ
+	public Car(){}
 	public Car(String n, String o, float mo, float ol, float f, float ms) {
 		this.name = n;
 		this.owner = o;
