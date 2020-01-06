@@ -1,0 +1,34 @@
+package test.car;
+
+public class CarTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Car car1 = new Car();
+		Car car2 = new Car();
+		Car car3 = new Car("¾Æ¹Ý¶¼", "±è±¸", 50, 25, 14, 190);
+		
+		car1.name = "¸ð´×";
+		car1.owner = "È«±æµ¿";
+		car1.fuel_efficiency = 15;
+		car1.max_oil_level = 40;
+		car1.oil_level_gauge = 20;
+		car1.maxSpeed = 170;
+		car1.carInfo();
+		car1.move(75, 20);
+		car1.carInfo();
+		car1.move(50, 35);
+		car1.carInfo();
+		
+		car1.name = "´Ï·Î ÇÏÀÌºê¸®µå";
+		car1.owner = "ÀÌ¼ø½Å";
+		car1.fuel_efficiency = 19;
+		car1.max_oil_level = 50;
+		car1.oil_level_gauge = 30;
+		car1.maxSpeed = 180;
+		car1.carInfo();
+		car1.move(80, 30);
+		car1.carInfo();
+	}
+
+}

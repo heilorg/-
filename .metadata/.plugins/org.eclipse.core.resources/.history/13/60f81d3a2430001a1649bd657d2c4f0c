@@ -1,0 +1,32 @@
+package test.car;
+
+public class Car {
+	String name;
+	String owner;
+	float max_oil_level;
+	float mileage;
+	float oil_level_gauge;
+	float fuel_efficiency;
+	float maxSpeed;
+	
+	void carInfo() {
+		System.out.println("이 자동차의 이름은 " + name + "입니다.");
+		System.out.println("이 자동차의 주인은 " + owner + "입니다.");
+		System.out.println("이 자동차의 최대 기름 양은 " + max_oil_level + "리터입니다.");
+		System.out.println("이 자동차의 현재 기름 양은 " + oil_level_gauge + "리터입니다.");
+		System.out.println("이 자동차의 최고 속도는 시속 " + maxSpeed + "Km/h입니다.");
+		System.out.println("이 자동차의 연비는 " + fuel_efficiency + "Km입니다.");
+		System.out.println("이 자동차의 현재까지 주행거리는 " + mileage + "Km입니다.");
+		System.out.println("---------------------------------");
+	}
+	
+	void move(int speed, int minute) {
+		if(speed > maxSpeed) {
+			System.out.println("최고속도인 " + maxSpeed + "Km/h를 넘을 수 없습니다.");
+			return;
+		}
+		
+		float maxDistance = oil_level_gauge * fuel_efficiency;
+		float distance = (minute/(float)60) * speed;
+	}
+}
