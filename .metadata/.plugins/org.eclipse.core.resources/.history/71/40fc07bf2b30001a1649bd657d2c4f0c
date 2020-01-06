@@ -19,6 +19,8 @@ public class Car {
 		this.oil_level_gauge = ol;
 		this.fuel_efficiency = f;
 		this.maxSpeed = ms;
+		
+		this.maxDistance = this.oil_level_gauge * this.fuel_efficiency;
 	}
 	
 	//메서드 (기능)
@@ -40,6 +42,7 @@ public class Car {
 		}
 		
 //		float maxDistance = oil_level_gauge * fuel_efficiency; // 최대 이동 가능거리 = 현재 기름양  * 연비
+		// ㄴ 필드값으로 변경
 		float distance = (minute / (float)60) * speed; //일정한 스피드로 일정 시간만큼 이돌할 거리 계산
 //		if(distance > maxDistance) {
 //			oil_level_gauge = 0;
@@ -52,7 +55,7 @@ public class Car {
 	}
 	
 	void move(float distance) { // 메서드 오버로딩 : 메서드 이름이 같아도 인자 값이나 수 자료형이 다르면 다른 메서드로 인식 
-		float maxDistance = oil_level_gauge * fuel_efficiency;
+//		float maxDistance = oil_level_gauge * fuel_efficiency; // 필드로 변경
 		if(distance > maxDistance) {
 			oil_level_gauge = 0;
 			mileage = mileage + maxDistance; 
