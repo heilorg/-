@@ -1,0 +1,15 @@
+package test.car;
+
+public class Rentcar {
+	Driveable[] cars = new Driveable[4];
+	Driver testDriver;
+	
+	public Rentcar() {
+		testDriver = new Driver("손님", "010-0000-0000", "guest@gmail.com", 20, null);
+		
+		cars[0] = new Sedan("쏘나타", testDriver, 50, 20, 12, 180, "black");
+		cars[1] = new Sedan("그랜저");
+		cars[2] = new Sedan("K5");
+		cars[3] = new Bus("마을버스");
+	}
+}

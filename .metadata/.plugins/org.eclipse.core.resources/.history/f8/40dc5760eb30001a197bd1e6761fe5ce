@@ -1,0 +1,15 @@
+package test.car;
+
+public class Owner {
+	private String name;
+	private String phone;
+	private String email;
+	private int age;
+	
+	public Owner(String name, String phone, String email, int age) {
+		this.name = name;
+		this.phone = phone;
+		this.email = email;
+		this.age = age;
+	}
+}

@@ -1,0 +1,11 @@
+package test.car;
+
+public class Driver extends Owner {
+	public static String LICENSE_NO1 = "1종";
+	public static String LICENSE_NO2 = "2종";
+	public static String LICENSE_BIG = "대형";
+	
+	public Driver(String name, String ) {
+		
+	}
+}

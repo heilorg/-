@@ -1,0 +1,26 @@
+package test.car;
+
+public class Rentcar {
+	Driveable[] cars = new Driveable[4];
+	Driver testDriver;
+	
+	public Rentcar() {
+		testDriver = new Driver("¼Õ´Ô", "010-0000-0000", "guest@gmail.com", 20, null);
+		
+		cars[0] = new Sedan("½î³ªÅ¸", testDriver, 50, 20, 12, 180, "black");
+		cars[1] = new Sedan("±×·£Àú", testDriver, 60, 20, 11, 180, "black");
+		cars[2] = new Sedan("K5", testDriver, 50, 20, 13, 180, "black");
+		cars[3] = new Bus("¸¶À»¹ö½º", testDriver, 100, 65, 9, 15);
+	}
+	
+	void chkRent(Driver driver) {
+		System.out.println("== " + driver.getName() + "°í°´´Ô, ·»Æ® °¡´É ÀÚµ¿Â÷ ==");
+		for(int i = 0; i < cars.length; i++) {
+			((Car)cars[i]).setOwner(driver);
+			
+			if(driver.getAge() >= 19 && cars[i].chkLicense()) {
+				System.out.println(((Car)cars[i]).getName());
+			}
+		}
+	}
+}

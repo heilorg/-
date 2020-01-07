@@ -1,0 +1,16 @@
+package test.car;
+
+public class Sedan extends Car {
+	private String color;
+	public Sedan(String name, Owner owner, float max_oil_level, float oil_level_gauge, float fuel_efficiency, float maxSpeed, String color) {
+		super(name, owner, max_oil_level, oil_level_gauge, fuel_efficiency, maxSpeed);
+		this.s
+	}
+	
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+}

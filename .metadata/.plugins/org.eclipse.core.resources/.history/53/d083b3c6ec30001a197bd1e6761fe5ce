@@ -1,0 +1,17 @@
+package test.car;
+
+public class Bus extends Car {
+	private int seat;
+	
+	public Bus() {
+		
+	}
+
+	public int getSeat() {
+		return seat;
+	}
+
+	public void setSeat(int seat) {
+		this.seat = seat;
+	}
+}

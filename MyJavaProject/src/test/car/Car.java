@@ -2,28 +2,75 @@ package test.car;
 
 public class Car {
 	//필드 (멤버변수)
-	String name;
-	String owner;
-	float max_oil_level;
-	float mileage;
-	float oil_level_gauge;
-	float fuel_efficiency;
-	float maxSpeed;
-
-	public Car(){}//생성자
-	public Car(String n, String o, float mo, float ol, float f, float ms) {
-		this.name = n;
-		this.owner = o;
-		this.max_oil_level = mo;
-		this.oil_level_gauge = ol;
-		this.fuel_efficiency = f;
-		this.maxSpeed = ms;
+	private String name;
+//	private String owner;
+	private Owner owner;
+	private float max_oil_level;
+	private float mileage;
+	private float oil_level_gauge;
+	private float fuel_efficiency;
+	private float maxSpeed;
+	
+	public Car(){} // 생성자
+	public Car(String name, Owner owner, float max_oil_level, float oil_level_gauge, float fuel_efficiency, float maxSpeed) { // 생성자
+		this.name = name;
+		this.owner = owner;
+		this.max_oil_level = max_oil_level;
+		this.oil_level_gauge = oil_level_gauge;
+		this.fuel_efficiency = fuel_efficiency;
+		this.maxSpeed = maxSpeed;
+	}
+	
+	public String getName() { // 게터와 세터를 쓰는 이유는?
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Owner getOwner() {
+		return owner;
+	}
+	public void setOwner(Owner owner) {
+		this.owner = owner;
+	}
+	public float getMax_oil_level() {
+		return max_oil_level;
+	}
+	public void setMax_oil_level(float max_oil_level) {
+		this.max_oil_level = max_oil_level;
+	}
+	public float getMileage() {
+		return mileage;
+	}
+	public void setMileage(float mileage) {
+		this.mileage = mileage;
+	}
+	public float getOil_level_gauge() {
+		return oil_level_gauge;
+	}
+	public void setOil_level_gauge(float oil_level_gauge) {
+		this.oil_level_gauge = oil_level_gauge;
+	}
+	public float getFuel_efficiency() {
+		return fuel_efficiency;
+	}
+	public void setFuel_efficiency(float fuel_efficiency) {
+		this.fuel_efficiency = fuel_efficiency;
+	}
+	public float getMaxSpeed() {
+		return maxSpeed;
+	}
+	public void setMaxSpeed(float maxSpeed) {
+		this.maxSpeed = maxSpeed;
 	}
 	
 	//메서드 (기능)
 	void carInfo() {
 		System.out.println("이 자동차의 이름은 " + name + "입니다.");
-		System.out.println("이 자동차의 주인은 " + owner + "입니다.");
+		System.out.println("이 자동차의 주인은 " + owner.getName() + "입니다.");
+		
+		System.out.println("이 자동차의 주인의 라이센스는 " + owner.getLicense() + "입니다.");
+		
 		System.out.println("이 자동차의 최대 기름 양은 " + max_oil_level + "리터입니다.");
 		System.out.println("이 자동차의 현재 기름 양은 " + oil_level_gauge + "리터입니다.");
 		System.out.println("이 자동차의 최고 속도는 시속 " + maxSpeed + "Km/h입니다.");

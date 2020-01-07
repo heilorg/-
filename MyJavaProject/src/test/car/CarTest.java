@@ -5,26 +5,45 @@ public class CarTest {
 		// TODO Auto-generated method stub
 		Car car1 = new Car(); // 인스턴스 생성
 		Car car2 = new Car();
-		Car car3 = new Car("아반떼", "김구", 50, 25, 14, 190);
+//		Car car3 = new Car("아반떼", "김구", 50, 25, 14, 190);
+//		Owner kim = new Owner("김구", "010-3333-4444", "kim@gmail.com", 30);
+		Owner kim = new Driver("김구", "010-3333-4444", "kim@gmail.com", 30, Driver.LICENSE_NO2);
+		Car car3 = new Car("아반떼", kim, 50, 25, 14, 190);
 		
-		car1.name = "모닝"; // 인스턴스 값 부여
-		car1.owner = "홍길동";
-		car1.fuel_efficiency = 15;
-		car1.max_oil_level = 40;
-		car1.oil_level_gauge = 20;
-		car1.maxSpeed = 170;
+//		car1.name = "모닝"; // 인스턴스 값 부여
+//		car1.owner = "홍길동";
+//		car1.fuel_efficiency = 15;
+//		car1.max_oil_level = 40;
+//		car1.oil_level_gauge = 20;
+//		car1.maxSpeed = 170;
+		car1.setName("모닝"); 
+//		car1.setOwner("홍길동");
+//		car1.setOwner(new Owner("홍길동", "010-1234-5678", "hong@gmail.com",20));
+		car1.setOwner(new Driver("홍길동", "010-1234-5678", "hong@gmail.com", 20, Driver.LICENSE_NO1));
+		car1.setFuel_efficiency(15);
+		car1.setMax_oil_level(40);
+		car1.setOil_level_gauge(20);
+		car1.setMaxSpeed(170);
 		car1.carInfo(); // 인스턴스 메서드 실행
 		car1.move(75, 20);
 		car1.carInfo();
 		car1.move(50, 35);
 		car1.carInfo();
 		
-		car2.name = "니로 하이브리드";
-		car2.owner = "이순신";
-		car2.fuel_efficiency = 19;
-		car2.max_oil_level = 50;
-		car2.oil_level_gauge = 30;
-		car2.maxSpeed = 180;
+//		car2.name = "니로 하이브리드";
+//		car2.owner = "이순신";
+//		car2.fuel_efficiency = 19;
+//		car2.max_oil_level = 50;
+//		car2.oil_level_gauge = 30;
+//		car2.maxSpeed = 180; 
+		car2.setName("니로 하이브리드"); 
+//		car2.setOwner("이순신");
+//		car2.setOwner(new Owner("이순신", "010-1111-2222", "lee@gmail.com",27));
+		car2.setOwner(new Driver("이순신", "010-1111-2222", "lee@gmail.com", 27, Driver.LICENSE_NO1));
+		car2.setFuel_efficiency(19);
+		car2.setMax_oil_level(50);
+		car2.setOil_level_gauge(30);
+		car2.setMaxSpeed(180);
 		car2.carInfo();
 		car2.move(80, 30);
 		car2.carInfo();
@@ -43,5 +62,46 @@ public class CarTest {
 //		car1.carInfo();
 //		car2.carInfo();
 //		car3.carInfo();
+		
+//		Bus bus1 = new Bus("타요", new Owner("안중근", "010-5555-6666", "an@gmail.com", 35), 100, 75, 8, 25);
+		Bus bus1 = new Bus("타요", new Driver("안중근", "010-5555-6666", "an@gmail.com", 35, Driver.LICENSE_BIG), 100, 75, 8, 25);
+		bus1.setMaxSpeed(150);
+		bus1.carInfo();
+		bus1.move(60, 20);
+		bus1.carInfo();
+		
+		
+		Car[] carArr = new Car[3];
+		carArr[0] = car1;
+		carArr[1] = bus1;
+//		Owner yoo = new Owner("유관순", "010-7777-8888", "yoo@gmail.com", 18);
+		Owner yoo = new Driver("유관순", "010-7777-8888", "yoo@gmail.com", 18, Driver.LICENSE_NO1);
+		carArr[2] = new Sedan("K5", yoo, 70, 50, 14, 190, "white");
+		
+		for(int i = 0; i < carArr.length; i++) {
+			System.out.println("carArr[" + i + "]배열의 값 : ");
+			if(carArr[i] instanceof Sedan) {
+				System.out.println("Sedan 클래스의 인스턴스이므로 Sedan 클래스만이 가지고 있는 color 필드의 값을 접근 할 수 있다.");
+				Sedan s = (Sedan)carArr[i];
+				System.out.println("차량 색 : " + s.getColor());
+			}else if(carArr[i] instanceof Bus) {
+				System.out.println("Bus 클래스의 인스턴스이므로 Bus 클래스만이 가지고 있는 seat 필드의 값을 접근 할 수 있다.");
+				Bus b = (Bus)carArr[i];
+				System.out.println("좌석 수 : " + b.getSeat());
+			}
+			carArr[i].carInfo();
+		}	
+		
+		Driver driver[] = new Driver[5];
+		driver[0] = new Driver("손님1", "010-0000-1111", "no1@gmail.com", 20, Driver.LICENSE_NO1);
+		driver[1] = new Driver("손님2", "010-0000-2222", "no2@gmail.com", 17, Driver.LICENSE_NO1);
+		driver[2] = new Driver("손님3", "010-0000-3333", "no3@gmail.com", 25, Driver.LICENSE_BIG);
+		driver[3] = new Driver("손님4", "010-0000-4444", "no4@gmail.com", 22, Driver.LICENSE_NO2);
+		driver[4] = new Driver("손님5", "010-0000-5555", "no5@gmail.com", 23, Driver.LICENSE_NO1);
+		
+		Rentcar kRentcar = new Rentcar();
+		for(int i = 0; i < driver.length; i++) {
+			kRentcar.chkRent(driver[i]);
+		}
 	}
 }

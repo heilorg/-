@@ -1,0 +1,8 @@
+package test.car;
+
+public class Sedan extends Car {
+	private String color;
+	public Sedan(String name, Owner owner, float max_oil_level, float oil_level_gauge, float fuel_efficiency, float maxSpeed, String color) {
+		
+	}
+}

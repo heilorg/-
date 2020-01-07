@@ -1,0 +1,22 @@
+package test.car;
+
+public class Bus extends Car {
+	private int seat;
+	
+	public Bus(String name, Owner owner, float max_oil_level, float oil_level_gauge, float fuel_efficiency, int seat) {
+		this.setName(name);
+		this.setOwner(owner);
+		this.setMax_oil_level(max_oil_level);
+		this.setOil_level_gauge(oil_level_gauge);
+		this.setFuel_efficiency(fuel_efficiency);
+		this.setSeat(seat);
+	}
+
+	public int getSeat() {
+		return seat;
+	}
+
+	public void setSeat(int seat) {
+		this.seat = seat;
+	}
+}

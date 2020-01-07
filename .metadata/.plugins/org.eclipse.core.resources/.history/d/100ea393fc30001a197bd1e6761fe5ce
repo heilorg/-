@@ -1,0 +1,6 @@
+package test.car;
+
+public class Rentcar {
+	Driveable[] cars = new Driveable[4];
+	
+}

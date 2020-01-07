@@ -1,0 +1,10 @@
+package test.car;
+
+public class Rentcar {
+	Driveable[] cars = new Driveable[4];
+	Driver testDriver;
+	
+	public Rentcar() {
+		testDriver = new Driver("¼Õ´Ô", "010-0000-0000", "guest@gmail.com", 20, null);
+	}
+}
