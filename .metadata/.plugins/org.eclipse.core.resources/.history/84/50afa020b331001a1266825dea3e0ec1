@@ -49,8 +49,7 @@ abstract public class Owner {
 		this.age = age;
 	}
 	
-	abstract public void haveLicense(String license); 
-	// 추상 메서드 - 일반 클래스는 추상메서드를 가질 수 없다. 일반클래스를 추상 클래스로 변경하였다. 
+	abstract public void haveLicense(String license);
 
 	public String getLicense() {
 		return license;

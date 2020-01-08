@@ -8,7 +8,7 @@ public class CarTest {
 //		Car car3 = new Car("아반떼", "김구", 50, 25, 14, 190);
 //		Owner kim = new Owner("김구", "010-3333-4444", "kim@gmail.com", 30);
 		Owner kim = new Driver("김구", "010-3333-4444", "kim@gmail.com", 30, Driver.LICENSE_NO2);
-		// Owner클래스는 이제 추상클래스이기에 사용할 수 없다.
+		// Owner 은 이제 추상클래스이기에 사용할 수 없다.
 		Car car3 = new Car("아반떼", kim, 50, 25, 14, 190);
 		
 //		car1.name = "모닝"; // 인스턴스 값 부여

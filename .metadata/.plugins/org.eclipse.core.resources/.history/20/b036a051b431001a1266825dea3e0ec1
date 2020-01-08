@@ -5,12 +5,14 @@ public class Bus extends Car implements Driveable {
 	private int seat;
 	
 	public Bus(String name, Owner owner, float max_oil_level, float oil_level_gauge, float fuel_efficiency, int seat) {
+		
+		this.seat = seat;
+		
 		this.setName(name);
 		this.setOwner(owner);
 		this.setMax_oil_level(max_oil_level);
 		this.setOil_level_gauge(oil_level_gauge);
 		this.setFuel_efficiency(fuel_efficiency);
-		this.seat = seat;
 	}
 
 	public int getSeat() {
@@ -32,7 +34,6 @@ public class Bus extends Car implements Driveable {
 		super.setMaxSpeed(maxSpeed);
 	}
 	
-	// 인터페이스의 메서드를 구현하지 않으면 오류가 난다
 	@Override
 	public boolean chkLicense() {
 		if(super.getOwner().getLicense().equals(Driver.LICENSE_BIG)) {
