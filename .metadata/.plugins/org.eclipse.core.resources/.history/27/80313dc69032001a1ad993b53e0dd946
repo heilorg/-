@@ -1,0 +1,9 @@
+package test.file;
+
+import java.io.IOException;
+
+public class MemberWrite {
+	public static void main(String[] args) throws IOException {
+		
+	}
+}

@@ -1,0 +1,10 @@
+package test.collection;
+
+import java.util.LinkedList;
+
+public class CollectionTest {
+	public static void main(String[] args) {
+		LinkedList<String> list1 = new LinkedList<String>();
+		list1.add("Hi");
+	}
+}

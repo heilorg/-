@@ -1,0 +1,13 @@
+package test.file;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+public class MemberWrite {
+	public static void main(String[] args) throws IOException {
+		File file = new File("member.txt");
+		ObjectInputStream ois= new ObjectInputStream(new FileInputStream(file));
+	}
+}

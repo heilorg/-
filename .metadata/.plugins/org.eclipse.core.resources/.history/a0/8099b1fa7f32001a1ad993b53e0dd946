@@ -1,0 +1,22 @@
+package test.String;
+
+public class StringBufferTest {
+	public static void main(String[] args) {
+		StringBuffer sb = new StringBuffer("hello");
+		sb.append(" ");
+		System.out.println(sb);
+		sb.append("World");
+		System.out.println(sb);
+		sb.append("!");
+		System.out.println(sb);
+		
+		String str = sb.toString();
+		System.out.println(str);
+		
+		// 문제
+		
+		String url = "https://search.naver.com/search.naver?query=자바";
+		String domain;
+		
+	}
+}

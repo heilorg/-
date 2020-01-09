@@ -1,0 +1,16 @@
+package test.file;
+
+import java.io.File;
+
+public class FileTest {
+	public static void main(String[] args) {
+		String fileName = "FileTest.txt";
+		
+		File f;
+		try {
+			f = new File(fileName);
+			FileWriter fileWriter = new FileWriter(f);
+			
+		}
+	}
+}

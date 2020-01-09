@@ -1,0 +1,18 @@
+package test.file;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+public class MemberWrite {
+	public static void main(String[] args) throws IOException {
+		Member member = new Member();
+		member.setId("Hong");
+		member.setName("ȫ�浿");
+		member.setAge(25);
+		
+		File file = new File("member.txt");
+		
+	}
+}

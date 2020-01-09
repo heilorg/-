@@ -1,0 +1,9 @@
+package test.collection;
+
+import java.util.LinkedList;
+
+public class CollectionTest {
+	public static void main(String[] args) {
+		List<Integer> list1 = new LinkedList<Integer>();
+	}
+}
