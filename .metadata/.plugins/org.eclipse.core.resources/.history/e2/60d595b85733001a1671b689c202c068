@@ -1,0 +1,70 @@
+package test.gui;
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JOptionPane;
+import javax.swing.ButtonGroup;
+import javax.swing.JPanel;
+
+@SuppressWarnings("serial")
+public class Game extends JFrame implements ActionListener  {
+	JPanel jp = new JPanel();
+	
+	JButton jb = new JButton("확인");
+	String radio_name[] = {"가위", "바위", "보"};
+	
+	JLabel title = new JLabel("가위바위보 게임");
+	JLabel subTitle = new JLabel("컴퓨터를 이겨라");
+	
+	JLabel winLabel = new JLabel("");
+	
+	JRadioButton radio[] = new JRadioButton[3];
+	
+	public Game() {
+		setTitle("가위바위보 게임");
+		
+		jp.setLayout(new FlowLayout());
+		
+		jp.add(title);
+		jp.add(subTitle);
+		
+		ButtonGroup group = new ButtonGroup();
+		for(int i=0; i<radio.length; i++){
+            radio[i] = new JRadioButton(radio_name[i]);
+            group.add(radio[i]);
+            jp.add(radio[i]);
+        }
+		
+		jb.addActionListener(this);
+		
+		jp.add(jb);
+		add(jp);
+		setSize(500, 400);
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(radio[0].isSelected()){
+			
+        }else if(radio[1].isSelected()){
+        	
+        }else if(radio[2].isSelected()){
+        	
+        }
+	}
+	
+	private void winCheck() {
+		
+	}
+	
+	public static void main(String[] args) {
+		new Game();
+	}
+}

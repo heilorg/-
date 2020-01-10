@@ -1,6 +1,6 @@
 package test.String;
 
-import java.util.ArrayList;
+//import java.util.c;
 
 public class StringBufferTest {
 	public static void main(String[] args) {

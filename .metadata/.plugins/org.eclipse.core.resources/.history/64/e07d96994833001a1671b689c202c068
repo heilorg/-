@@ -1,0 +1,37 @@
+package test.gui;
+
+import java.awt.FlowLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class FlowLayoutTest extends JFrame {
+	JPanel jp = new JPanel(); // 패널 초기화
+	
+	JButton jb1 = new JButton("버튼1");
+	JButton jb2 = new JButton("버튼2");
+	JButton jb3 = new JButton("버튼3");
+	JButton jb4 = new JButton("버튼4");
+	JButton jb5 = new JButton("버튼5");
+	JButton jb6 = new JButton("버튼6");
+	
+	public FlowLayoutTest() {
+		super("FlowLayout"); // setTitle과 동일?
+		jp.add(jb1);
+		jp.add(jb2);
+		jp.add(jb3);
+		jp.add(jb4);
+		jp.add(jb5);
+		jp.add(jb6);
+		
+		jp.setLayout(new FlowLayout());
+		add(jp);
+		setSize(400, 300);
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	public static void main(String[] args) {
+		new FlowLayoutTest();
+	}
+}

@@ -1,0 +1,12 @@
+package test.gui;
+
+import javax.swing.JButton;
+
+public class MyFrame {
+	JButton button;
+	
+	public MyFrame() {
+		setSize(300, 200);
+		setDefaultCloseOperation();
+	}
+}

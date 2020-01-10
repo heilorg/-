@@ -1,0 +1,22 @@
+package test.file;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+public class MemberWrite {
+	public static void main(String[] args) throws IOException {
+		Member member = new Member();
+		member.setId("Hong");
+		member.setName("ȫ�浿");
+		member.setAge(25);
+		
+		File file = new File("member.txt");
+		FileOutputStream fos = new FileOutputStream(file);
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+		oos.writeObject(member);
+		oos.close();
+		fos.close();
+	}
+}

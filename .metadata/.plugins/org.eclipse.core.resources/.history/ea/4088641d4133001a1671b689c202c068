@@ -1,0 +1,8 @@
+package test.gui;
+
+public class FrameTest {
+
+	public static void main(String[] args) {
+		myFrame f = new MyFrame();
+	}
+}

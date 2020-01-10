@@ -1,0 +1,36 @@
+package test.gui;
+
+import java.awt.BorderLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class BorderLayoutTest extends JFrame {
+JPanel jp = new JPanel();
+	
+	JButton jb1 = new JButton("버튼1");
+	JButton jb2 = new JButton("버튼2");
+	JButton jb3 = new JButton("버튼3");
+	JButton jb4 = new JButton("버튼4");
+	JButton jb5 = new JButton("버튼5");
+	
+	public BorderLayoutTest() {
+		super("BorderLayout");
+		jp.setLayout(new BorderLayout());
+		
+		jp.add(jb1, "North");
+		jp.add(jb2, "West");
+		jp.add(jb3, "South");
+		jp.add(jb4, "Center");
+		jp.add(jb5, "East");
+		
+		add(jp);
+		setSize(400, 300);
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	public static void main(String[] args) {
+		new BorderLayoutTest();
+	}
+}

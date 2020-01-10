@@ -22,12 +22,14 @@ public class FileTest {
 			writer.write("°úÇÐ°í");
 			writer.close();
 			fileWriter.close();
+			
 			FileReader fileReader = new FileReader(f);
 			BufferedReader reader = new BufferedReader(fileReader);
 			String line = null;
 			while((line = reader.readLine()) != null) {
 				System.out.println(line);
 			}
+			reader.close();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

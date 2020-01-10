@@ -2,6 +2,7 @@ package test.file;
 
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public class Member implements Serializable {
 	private String id;
 	private String name;
